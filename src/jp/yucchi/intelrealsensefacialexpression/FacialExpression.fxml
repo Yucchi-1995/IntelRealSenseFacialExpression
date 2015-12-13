@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="698.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.yucchi.intelrealsensefacialexpression.FacialExpressionController">
+   <children>
+      <Text fill="WHITE" layoutX="4.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intel RealSense Facial Expression with JavaFX" textAlignment="CENTER" wrappingWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Serif Bold" size="50.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#0098f7" />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="158.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="374.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="480.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <StackPane alignment="TOP_RIGHT" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="158.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="374.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Canvas fx:id="canvas" height="480.0" width="640.0" StackPane.alignment="CENTER" />
+         </children>
+      </StackPane>
+      <Label fx:id="browRaiserLeftLabel" layoutX="660.0" layoutY="60.0" prefHeight="20.0" prefWidth="150.0" text="BROW RAISER LEFT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="browRaiserLeftProgressBar" layoutX="811.0" layoutY="61.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="browRaiserLeftResultLabel" layoutX="982.0" layoutY="62.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="browRaiserRightLabel" layoutX="660.0" layoutY="80.0" prefHeight="20.0" prefWidth="150.0" text="BROW RAISER RIGHT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="browRaiserRightProgressBar" layoutX="811.0" layoutY="81.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="85.0" />
+      <Label fx:id="browRaiserRightResultLabel" layoutX="980.0" layoutY="82.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="browLowererLeftLabel" layoutX="660.0" layoutY="105.0" prefHeight="20.0" prefWidth="150.0" text="BROW LOWERER LEFT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="browLowererLeftProgressBar" layoutX="810.0" layoutY="111.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0" />
+      <Label fx:id="browLowererLeftResultLabel" layoutX="989.0" layoutY="111.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="browLowererRightLabel" layoutX="660.0" layoutY="130.0" prefHeight="20.0" prefWidth="150.0" text="BROW LOWERER RIGHT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="browLowererRightProgressBar" layoutX="820.0" layoutY="136.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="135.0" />
+      <Label fx:id="browLowererRightResultLabel" layoutX="996.0" layoutY="137.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="smileLabel" layoutX="660.0" layoutY="163.0" prefHeight="20.0" prefWidth="150.0" text="SMILE" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="smileProgressBar" layoutX="820.0" layoutY="161.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="160.0" />
+      <Label fx:id="smiletResultLabel" layoutX="989.0" layoutY="162.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="kissLabel" layoutX="660.0" layoutY="180.0" prefHeight="20.0" prefWidth="150.0" text="KISS" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="kissProgressBar" layoutX="820.0" layoutY="186.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="185.0" />
+      <Label fx:id="kissResultLabel" layoutX="989.0" layoutY="187.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mouthOpenLabel" layoutX="660.0" layoutY="205.0" prefHeight="20.0" prefWidth="150.0" text="MOUTH OPEN" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="mouthOpenProgressBar" layoutX="820.0" layoutY="211.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="210.0" />
+      <Label fx:id="mouthOpenResultLabel" layoutX="989.0" layoutY="212.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="tongueOutLabel" layoutX="660.0" layoutY="230.0" prefHeight="20.0" prefWidth="150.0" text="TONGUE OUT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="tongueOutProgressBar" layoutX="820.0" layoutY="236.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="235.0" />
+      <Label fx:id="tongueOutResultLabel" layoutX="989.0" layoutY="237.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesClosedLeftLabel" layoutX="660.0" layoutY="255.0" prefHeight="20.0" prefWidth="150.0" text="EYES CLOSED LEFT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesClosedLeftProgressBar" layoutX="820.0" layoutY="261.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="260.0" />
+      <Label fx:id="eyesClosedLeftResultLabel" layoutX="996.0" layoutY="262.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesClosedRightLabel" layoutX="660.0" layoutY="280.0" prefHeight="20.0" prefWidth="150.0" text="EYES CLOSED RIGHT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesClosedRightProgressBar" layoutX="820.0" layoutY="286.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="285.0" />
+      <Label fx:id="eyesClosedRightResultLabel" layoutX="989.0" layoutY="287.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesTurnLeftLabel" layoutX="660.0" layoutY="305.0" prefHeight="20.0" prefWidth="150.0" text="EYES TURN LEFT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesTurnLeftProgressBar" layoutX="820.0" layoutY="311.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="310.0" />
+      <Label fx:id="eyesTurnLeftResultLabel" layoutX="989.0" layoutY="312.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesTurnRightLabel" layoutX="660.0" layoutY="330.0" prefHeight="20.0" prefWidth="150.0" text="EYES TURN RIGHT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="335.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesTurnRightProgressBar" layoutX="820.0" layoutY="336.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="335.0" />
+      <Label fx:id="eyesTurnRightResultLabel" layoutX="989.0" layoutY="337.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="335.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesUpLabel" layoutX="660.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" text="EYES UP" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="360.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesUpProgressBar" layoutX="820.0" layoutY="361.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="360.0" />
+      <Label fx:id="eyesUpResultLabel" layoutX="989.0" layoutY="362.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="360.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eyesDownLabel" layoutX="660.0" layoutY="384.0" prefHeight="20.0" prefWidth="150.0" text="EYES DOWN" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="385.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="eyesDownProgressBar" layoutX="820.0" layoutY="386.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="385.0" />
+      <Label fx:id="eyesDownResultLabel" layoutX="989.0" layoutY="387.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="385.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="puffLeftLabel" layoutX="660.0" layoutY="405.0" prefHeight="20.0" prefWidth="150.0" text="PUFF LEFT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="410.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="puffLeftProgressBar" layoutX="820.0" layoutY="411.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="410.0" />
+      <Label fx:id="puffLeftResultLabel" layoutX="989.0" layoutY="412.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="410.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="puffRightLabel" layoutX="660.0" layoutY="430.0" prefHeight="20.0" prefWidth="150.0" text="PUFF RIGHT" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="435.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="puffRightProgressBar" layoutX="820.0" layoutY="436.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="435.0" />
+      <Label fx:id="puffRightResultLabel" layoutX="989.0" layoutY="437.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="435.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="heartRatetLabel" layoutX="660.0" layoutY="455.0" prefHeight="20.0" prefWidth="150.0" text="HEART RATE" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="460.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="heartRateProgressBar" layoutX="820.0" layoutY="461.0" prefHeight="20.0" prefWidth="164.0" progress="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="460.0" />
+      <Label fx:id="heartRateResultLabel" layoutX="989.0" layoutY="462.0" prefHeight="20.0" text="--" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="460.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="yawLabel" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="485.0" prefHeight="20.0" prefWidth="110.0" text="Yaw: " AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="485.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pitchLabel" alignment="CENTER_RIGHT" layoutX="712.0" layoutY="485.0" prefHeight="20.0" prefWidth="110.0" text="Pitch: " AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="485.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rollLabel" alignment="CENTER_RIGHT" layoutX="761.0" layoutY="485.0" prefHeight="20.0" prefWidth="110.0" text="Roll: " textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="485.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="detectionCheckBox" focusTraversable="false" layoutX="660.0" layoutY="520.0" mnemonicParsing="false" prefWidth="90.0" text="Detection" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="520.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="landmarkCheckBox" focusTraversable="false" layoutX="820.0" layoutY="520.0" mnemonicParsing="false" prefWidth="90.0" text="Landmark" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="520.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Button id="startButton" fx:id="startButton" layoutX="10.0" layoutY="628.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="60.0" prefWidth="315.0" text="START" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="699.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="stopButton" disable="true" layoutX="337.0" layoutY="628.0" mnemonicParsing="false" onAction="#handleStoptButtonAction" prefHeight="60.0" prefWidth="315.0" text="STOP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="372.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="660.0" layoutY="628.0" mnemonicParsing="false" onAction="#handleExittButtonAction" prefHeight="60.0" prefWidth="353.0" text="EXIT" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label id="primaryLabel" fx:id="recognitionLabel" alignment="CENTER" layoutX="15.0" layoutY="558.0" prefHeight="60.0" prefWidth="640.0" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="374.0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button id="registerButton" fx:id="registerButton" disable="true" layoutX="661.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleRegisterButtonAction" prefHeight="55.0" prefWidth="171.0" text="REGISTER" AnchorPane.bottomAnchor="82.0" AnchorPane.rightAnchor="193.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button id="UnregistreButton" fx:id="UnregistreButton" disable="true" layoutX="857.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleUnregisterButtonAction" prefHeight="55.0" prefWidth="171.0" text="UNREGISTER" AnchorPane.bottomAnchor="82.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
